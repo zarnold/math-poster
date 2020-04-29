@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Moi RPG ( patron )</title>
+
+    <meta name="author" content="cepcam" />
+
+    <style>
+        body {
+            width: 1123px;
+            height: 794px;
+            border: solid 5px rgb(83, 63, 25);
+
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 1em;
+            line-height: 1.5em;
+            background: white;
+        }
+
+        ul,
+        ul li,
+        ul ul li {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+            list-style-type: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            align-content: space-between;
+        }
+
+        header {
+            width: 100%;
+            height: 10%;
+            border-bottom: 1px solid #AAA;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            height: 90%;
+        }
+
+        section {
+            flex: 1;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #skills {
+            height: 60%;
+        }
+
+        #talents {
+            height: 40%;
+        }
+
+        span {
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        #dispatch {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            height: 90%;
+        }
+
+        #avantages {
+            border: 1px solid #333;
+        }
+
+        #desavantages {
+            border: 1px solid #333;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                color: #000;
+                background-color: #fff;
+                margin: 2vh auto;
+                width: 90vw;
+                height: 90vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section id="carac">
+            <div id="skills" class="column">
+                <h2>Caractéristiques</h2>
+                <ul>
+                    <li><progress value=0 max=100></progress><span>Force</span></li>
+                    <li><progress value=0 max=100></progress><span>Constitution</span></li>
+                    <li><progress value=0 max=100></progress><span>Agilité</span></li>
+                    <li><progress value=0 max=100></progress><span>Endurance</span></li>
+                    <li><progress value=0 max=100></progress><span>Intelligence</span></li>
+                    <li><progress value=0 max=100></progress><span>Volonté</span></li>
+                    <li><progress value=0 max=100></progress><span>Perception</span></li>
+                    <li><progress value=0 max=100></progress><span>Charisme</span></li>
+                </ul>
+            </div>
+            <div id="talents" class="column">
+                <h2>Talents</h2>
+                <div id="dispatch">
+                    <div id="avantages">
+                        <h3>Avantages</h3>
+                        <p></p>
+                    </div>
+                    <div id="desavantages">
+                        <h3>Désavantages</h3>
+                        <div></div>
+                    </div>
+                </div>
+        </section>
+        <section id="sketch"></section>
+        <section id="inventory"></section>
+    </main>
+</body>
+
+</html>
